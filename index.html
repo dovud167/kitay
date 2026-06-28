@@ -2,29 +2,35 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Мой учет</title>
+    <title>HACKER_FINANCE_OS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <button onclick="showPage('add-page')">Добавить</button>
-        <button onclick="showPage('stats-page')">Статистика</button>
-    </nav>
+    <header>
+        <h1>[ SYSTEM_ACTIVE ]</h1>
+        <nav>
+            <button onclick="showPage('add-page')">INPUT_DATA</button>
+            <button onclick="showPage('stats-page')">ANALYTICS</button>
+        </nav>
+    </header>
 
     <div id="add-page" class="page active">
-        <h2>Добавить запись</h2>
-        <input type="text" id="title" placeholder="Что купили/заказ">
-        <input type="number" id="amount" placeholder="Сумма (сомони)">
+        <h2>> NEW_TRANSACTION</h2>
+        <input type="text" id="title" placeholder="ENTER_DESCRIPTION...">
+        <input type="number" id="amount" placeholder="AMOUNT...">
         <select id="type">
-            <option value="income">Доход</option>
-            <option value="expense">Расход</option>
+            <option value="income">INCOME</option>
+            <option value="expense">EXPENSE</option>
         </select>
-        <button onclick="saveData()">Сохранить</button>
+        <button onclick="saveData()">[ EXECUTE ]</button>
     </div>
 
     <div id="stats-page" class="page">
-        <h2>Итоги</h2>
+        <h2>> CORE_STATISTICS</h2>
         <div id="result"></div>
+        <hr>
+        <div id="list"></div>
     </div>
 
     <script src="script.js"></script>
