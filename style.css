@@ -1,8 +1,31 @@
-body { background: #0d0d0d; color: #00ff41; font-family: 'Courier New', Courier, monospace; padding: 20px; }
-header { border-bottom: 2px solid #00ff41; padding-bottom: 10px; margin-bottom: 20px; text-align: center; }
-.page { display: none; border: 1px solid #333; padding: 20px; border-radius: 5px; }
-.page.active { display: block; }
-input, select { background: #1a1a1a; border: 1px solid #00ff41; color: #00ff41; padding: 10px; width: 100%; margin: 5px 0; }
-button { background: #00ff41; color: #0d0d0d; border: none; padding: 10px; cursor: pointer; font-weight: bold; width: 100%; }
-.item-row { display: flex; justify-content: space-between; border-bottom: 1px solid #333; padding: 5px 0; }
-.delete-btn { color: red; cursor: pointer; font-weight: bold; }
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --accent-color: #00ff41;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+}
+
+body { background-color: var(--bg-color); color: var(--text-main); font-family: sans-serif; margin: 0; }
+
+header {
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), 
+                url('https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=1470') center/cover;
+    padding: 50px 20px; text-align: center; border-bottom: 3px solid var(--accent-color);
+}
+
+nav { display: flex; justify-content: center; background: var(--card-bg); padding: 10px; }
+nav button { background: none; border: none; color: var(--text-muted); padding: 10px 20px; cursor: pointer; }
+nav button.active { color: var(--accent-color); border-bottom: 2px solid var(--accent-color); }
+
+.container { max-width: 600px; margin: 20px auto; padding: 0 20px; }
+.page { display: none; }
+.page.active-page { display: block; }
+
+.card { background: var(--card-bg); padding: 20px; border-radius: 12px; margin-bottom: 20px; }
+input, select { width: 100%; padding: 12px; margin: 10px 0; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 6px; }
+
+.btn-main { width: 100%; padding: 15px; background: var(--accent-color); border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }
+
+.record-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #334155; }
+.del-btn { color: #ef4444; cursor: pointer; margin-left: 10px; }
