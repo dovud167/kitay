@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HACKER_FINANCE_OS</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,21 +14,27 @@
     <div class="stats-container">
         <div class="circle-box">
             <div class="circle" id="inc-circle">0</div>
-            <span>INCOME+</span>
+            <span class="label">ДОХОД</span>
         </div>
         <div class="circle-box">
             <div class="circle" id="exp-circle">0</div>
-            <span>EXPENSE-</span>
+            <span class="label">РАСХОД</span>
         </div>
     </div>
 
-    <div class="page active">
-        <input type="text" id="title" placeholder="ITEM_NAME...">
-        <input type="number" id="amount" placeholder="AMOUNT...">
-        <select id="type"><option value="income">INCOME</option><option value="expense">EXPENSE</option></select>
-        <button id="save-btn" onclick="saveData()">[ ADD_RECORD ]</button>
+    <div class="main-card">
+        <input type="text" id="title" placeholder=">_ ОПИСАНИЕ...">
+        <input type="number" id="amount" placeholder=">_ СУММА...">
+        <select id="type">
+            <option value="income">ДОХОД (+)</option>
+            <option value="expense">РАСХОД (-)</option>
+        </select>
         
-        <div id="list"></div>
+        <button id="save-btn" class="btn-execute" onclick="saveData()">[ ВЫПОЛНИТЬ ТРАНЗАКЦИЮ ]</button>
+        
+        <button id="cancel-btn" class="btn-cancel" onclick="resetForm()" style="display:none;">[ ОТМЕНА РЕДАКТИРОВАНИЯ ]</button>
+
+        <div id="list" class="list-container"></div>
     </div>
 
     <script src="script.js"></script>
